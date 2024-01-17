@@ -12,11 +12,11 @@ function Crab() {
     const rtResearchData = await getSingleDoc('RESEARCH', 'FIDDLER_CRABS');
     setResearchData(rtResearchData.researchText);
 
-    localStorage.setItem('FIDDLER_CRABS', rtResearchData.researchText)
+    sessionStorage.setItem('FIDDLER_CRABS', rtResearchData.researchText)
   }
 
   useEffect(() => {
-    const storageData = localStorage.getItem('FIDDLER_CRABS')
+    const storageData = sessionStorage.getItem('FIDDLER_CRABS')
     storageData === null ? getPageData() : setResearchData(storageData);
   }, [])
 

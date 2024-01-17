@@ -15,11 +15,11 @@ function PeopleCard(props) {
 
   const { name, email, description } = memberInfo.info[memberId];
 
-  console.log('PeopleCard', { memberInfo });
+  // console.log('PeopleCard', { memberInfo });
   return (
     <div className={classes.cardContainer}>
       <div className={classes.imageContainer}>
-        <img src={`/memberPhoto/${memberId}.JPG`} alt='member' />
+        <img src={`/memberPhoto/${memberId}.jpg`} alt='member' />
       </div>
 
       <div className={classes.infoContainer}>

@@ -58,15 +58,15 @@ export const getSingleDoc = async (collectionName, docName) => {
   const docRef = doc(db, collectionName, docName);
   const docSnap = await getDoc(docRef);
   if (docSnap.exists()) {
-    console.log("getSingleDoc Document data:", {
-      docSnap,
-      data: docSnap.data(),
-    });
+    // console.log("getSingleDoc Document data:", {
+    //   docSnap,
+    //   data: docSnap.data(),
+    // });
 
     return docSnap.data();
   } else {
     // docSnap.data() will be undefined in this case
-    console.log("No such document!");
+    // console.log("No such document!");
     return; // TODO: error log
   }
 }; // getSingleDoc
@@ -84,7 +84,7 @@ export const getAllDocs = async (collectionName) => {
   const querySnapshot = await getDocs(collection(db, collectionName));
   querySnapshot.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
-    console.log(doc.id, " => ", doc.data());
+    // console.log(doc.id, " => ", doc.data());
     const docInfo = { [doc.id]: doc.data() };
     docsArray.push(docInfo);
   });

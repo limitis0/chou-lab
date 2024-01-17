@@ -19,11 +19,11 @@ function About() {
     const rtAboutData = await getSingleDoc('ABOUT', 'ABOUT_CONTENT');
     setAboutData(rtAboutData.aboutText);
 
-    localStorage.setItem('ABOUT', rtAboutData.aboutText)
+    sessionStorage.setItem('ABOUT', rtAboutData.aboutText)
   }
 
   useEffect(() => {
-    const storageData = localStorage.getItem('ABOUT')
+    const storageData = sessionStorage.getItem('ABOUT')
     storageData === null ? getPageData() : setAboutData(storageData);
   }, []);
 

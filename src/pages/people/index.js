@@ -12,11 +12,11 @@ export default function People() {
 
     setPeopleData(rtPeopleData);
 
-    localStorage.setItem('PEOPLE', JSON.stringify(rtPeopleData))
+    sessionStorage.setItem('PEOPLE', JSON.stringify(rtPeopleData))
   }
 
   useEffect(() => {
-    const storageData = localStorage.getItem('PEOPLE')
+    const storageData = sessionStorage.getItem('PEOPLE')
     storageData === null ? getPageData() : setPeopleData(JSON.parse(storageData));
   }, []);
 

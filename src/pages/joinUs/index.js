@@ -12,11 +12,11 @@ export default function JoinUs() {
     const rtJoinUsData = await getSingleDoc('CONTACT', 'JOIN_US');
 
     setJoinUsData(rtJoinUsData.content);
-    localStorage.setItem('JOIN_US', rtJoinUsData.content)
+    sessionStorage.setItem('JOIN_US', rtJoinUsData.content)
   }
 
   useEffect(() => {
-    const storageData = localStorage.getItem('JOIN_US')
+    const storageData = sessionStorage.getItem('JOIN_US')
 
     storageData === null ? getPageData() : setJoinUsData(storageData);
   }, []);

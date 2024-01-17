@@ -13,11 +13,11 @@ export default function Publications() {
 
     setPublicationData(rtPublicationData.publicationDetail) // type: array
 
-    localStorage.setItem('PUBLICATIONS', JSON.stringify(rtPublicationData.publicationDetail))
+    sessionStorage.setItem('PUBLICATIONS', JSON.stringify(rtPublicationData.publicationDetail))
   }
 
   useEffect(() => {
-    const storageData = localStorage.getItem('PUBLICATIONS');
+    const storageData = sessionStorage.getItem('PUBLICATIONS');
     storageData === null ? getPageData() : setPublicationData(JSON.parse(storageData));
   }, []);
   return (

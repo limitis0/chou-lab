@@ -1,11 +1,11 @@
 /* join us page */
 .pageContainer {
-  display: grid;
-  gap: 48px;
 
   .contentBackground {
     background-color: rgba(230,230,230,0.8);
     box-shadow: 0 0 36px 36px rgba(230,230,230,0.8);
+    display: grid;
+    gap: 48px;
   }
 
   .background {

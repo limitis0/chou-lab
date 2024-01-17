@@ -11,11 +11,11 @@ function Magpie() {
     const rtResearchData = await getSingleDoc('RESEARCH', 'TAIWAN_BLUE_MAGPIE');
     setResearchData(rtResearchData.researchText);
 
-    localStorage.setItem('TAIWAN_BLUE_MAGPIE', rtResearchData.researchText)
+    sessionStorage.setItem('TAIWAN_BLUE_MAGPIE', rtResearchData.researchText)
   }
 
   useEffect(() => {
-    const storageData = localStorage.getItem('TAIWAN_BLUE_MAGPIE')
+    const storageData = sessionStorage.getItem('TAIWAN_BLUE_MAGPIE')
     storageData === null ? getPageData() : setResearchData(storageData);
   }, [])
 

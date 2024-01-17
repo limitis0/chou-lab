@@ -21,7 +21,7 @@ function Footer() {
   const getPageData = async () => {
     const rtContactData = await getSingleDoc('CONTACT', 'CONTACT');
 
-    console.log(`useeffect rtData ->`, { rtContactData });
+    // console.log(`useeffect rtData ->`, { rtContactData });
     const { address, phone, email } = rtContactData;
     setContactData({ address, phone, email });
   }
