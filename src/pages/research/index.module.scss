@@ -57,16 +57,16 @@
       background-size: cover;
       .magpieBtnTitle {
         visibility: hidden;
-      }
-    }
-    .magpieBtn:hover {
-      .magpieBtnTitle {
-        visibility: visible;
         background-color: rgba(255,255,255,0.68);
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
+      }
+    }
+    .magpieBtn:hover {
+      .magpieBtnTitle {
+        visibility: visible;
       }
     }
   }
@@ -95,7 +95,6 @@
 
     background: linear-gradient(to left, rgba(255,255,255,0) 10%, var(--color-lighter)), url('./photo_research_crab.jpg') no-repeat;
     background-size: cover;
-    background-position: 20%;
   }
 }
 
@@ -122,5 +121,50 @@
     background: linear-gradient(to left, rgba(255,255,255,0) 10%, var(--color-lighter)), url('./photo_research_magpie.png') no-repeat;
     background-size: cover;
     background-position: 45%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .pageContainer {
+    margin-top: 18vh;
+    .photoBtnContainer {
+      grid-template-columns: 1fr;
+      .crabBtn {
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 56%, var(--color-lighter)), url('./photo_research_crab_btn.jpg') no-repeat;
+        background-size: cover;
+
+        .crabBtnTitle {
+          visibility: visible;
+          background-color: rgba(255,255,255,0.4);
+        }
+      }
+      .magpieBtn {
+        .magpieBtnTitle {
+          visibility: visible;
+          background-color: rgba(255,255,255,0.4);
+        }
+      }
+    }
+  }
+
+  .crabPageContainer {
+    width: 100%;
+    .background {
+      height: 240px;
+      width: 100vw;
+  
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 10%, var(--color-lighter)), url('./photo_research_crab.jpg') no-repeat;
+      background-size: cover;
+    }
+  }
+  .magpiePageContainer {
+    width: 100%;
+    .background {
+      height: 240px;
+      width: 100vw;
+  
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 10%, var(--color-lighter)), url('./photo_research_magpie.png') no-repeat;
+      background-size: cover;
+    }
   }
 }

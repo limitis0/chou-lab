@@ -47,3 +47,82 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .container {
+    background-color: var(--color-green);
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+  
+  
+    .logo {
+      width: 240px;
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr 2.5fr;
+      align-items: center;
+
+      .icon {
+        margin-left: auto;
+      }
+      .title {
+        font-size: 20px;
+        line-height: 20px;
+      }
+      .subtitle {
+        font-size: 10px;
+        line-height: 10px;
+        text-align: center;
+      }
+    }
+  
+    .btns {
+      display: none;
+    }
+
+    .menu {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+    }
+    .phoneMenu {
+      width: 100vw;
+      height: calc(100vh - 60px);
+      background: rgba(41, 115, 115, 0.84);
+      position: fixed;
+      top: 60px;
+      left: 0;
+
+      display: grid;
+      align-content: space-between;
+
+      .menuBtns {
+        .menuBtnBackground {
+          height: 48px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .contact {
+        display: grid;
+        gap: 12px;
+        justify-items: center;
+        
+        background-color: var(--color-green);
+        height: fit-content;
+        padding-top: 21px;
+        padding-bottom: 48px;
+
+        .singleInfo {
+          max-width: 75vw;
+          display: grid;
+          grid-template-columns: min-content auto;
+          gap: 12px;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

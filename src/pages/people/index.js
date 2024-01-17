@@ -6,6 +6,7 @@ import { getAllDocs } from '../../utilities/api';
 
 export default function People() {
   const [peopleData, setPeopleData] = useState([]);
+  const [isMobileSize, setIsMobileSize] = useState(false);
 
   const getPageData = async () => {
     const rtPeopleData = await getAllDocs('PEOPLE');
@@ -18,13 +19,14 @@ export default function People() {
   useEffect(() => {
     const storageData = sessionStorage.getItem('PEOPLE')
     storageData === null ? getPageData() : setPeopleData(JSON.parse(storageData));
+    setIsMobileSize(window.innerWidth < 900);
   }, []);
 
   return (
     <div className={classes.pageContainer}>
-      <Title textContent='People' fontSize='64' color='dark' wide='expand' textAlign='start' isUnderline />
+      {!isMobileSize ? <Title textContent='People' fontSize='64' color='dark' wide='expand' textAlign='start' isUnderline /> : <Title textContent='People' fontSize='48' color='dark' wide='expand' textAlign='center' isUnderline />}
       {peopleData && <div className={classes.contentContainer}>
-        {peopleData.map((data, index) => <PeopleCard memberId={`MEMBER_0${index}`} memberInfo={{ info: data }} />)}
+        {peopleData.map((data, index) => <PeopleCard memberId={`MEMBER_0${index}`} memberInfo={{ info: data }} isMobileSize={isMobileSize} key={index} />)}
       </div>}
     </div>
   );

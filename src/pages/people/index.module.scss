@@ -40,3 +40,38 @@
     // background-color: var(--color-green);
   }
 }
+
+@media screen and (max-width: 900px) {
+  .pageContainer {
+  
+    .contentContainer {
+
+    }
+  }
+  .cardContainer {
+    // width: 100%;
+    background-color: transparent;
+    border-left: none;
+  
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+  
+    .imageContainer {
+      height: 360px;
+      border-left: 6px solid var(--color-orange);
+  
+      background-color: var(--color-green);
+  
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  
+    .infoContainer {
+      margin: 24px 0 0 0;
+    }
+  }
+}
