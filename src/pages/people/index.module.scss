@@ -1,0 +1,42 @@
+/* people page */
+.pageContainer {
+  display: grid;
+  gap: 72px;
+
+  .contentContainer {
+    display: grid;
+    gap: 84px;
+  }
+}
+
+/* people card */
+.cardContainer {
+  width: 100%;
+  background-color: var(--color-light);
+  border-left: 6px solid var(--color-orange);
+
+  display: grid;
+  grid-template-columns: min-content auto;
+
+  .imageContainer {
+    width: 306px;
+
+    background-color: var(--color-green);
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .infoContainer {
+    margin: 54px 18px 12px 54px;
+    display: grid;
+    grid-template-rows: min-content auto;
+    gap: 24px;
+    // align-content: center;
+
+    // background-color: var(--color-green);
+  }
+}

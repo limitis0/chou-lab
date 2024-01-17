@@ -1,0 +1,117 @@
+/* research page (index) */
+.pageContainer {
+  display: grid;
+  justify-items: center;
+
+  .titleContainer {
+    z-index: 2000;
+  }
+
+  .photoBtnContainer {
+    z-index: 1200;
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: var(--color-light);
+
+    .photoBtn {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .photoBtn:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    .crabBtn {
+      background: linear-gradient(to top, rgba(255,255,255,0) 56%, var(--color-lighter)), url('./photo_research_crab_btn.jpg') no-repeat;
+      background-size: cover;
+      .crabBtnTitle {
+        visibility: hidden;
+      }
+    }
+    .crabBtn:hover {
+      .crabBtnTitle {
+        visibility: visible;
+      }
+    }
+
+    .magpieBtn {
+      background: linear-gradient(to top, rgba(255,255,255,0) 56%, var(--color-lighter)), url('./photo_research_magpie_btn.jpg') no-repeat;
+      background-size: cover;
+      .magpieBtnTitle {
+        visibility: hidden;
+      }
+    }
+    .magpieBtn:hover {
+      .magpieBtnTitle {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+
+/* crab page */
+.crabPageContainer {
+  width: 70%;
+  display: grid;
+  gap: 48px;
+
+  .content {
+    display: grid;
+    gap: 24px;
+  }
+
+  .background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1000;
+
+    height: 100vh;
+    width: 720px;
+
+    background: linear-gradient(to left, rgba(255,255,255,0) 10%, var(--color-lighter)), url('./photo_research_crab.JPG') no-repeat;
+    background-size: cover;
+    background-position: 20%;
+  }
+}
+
+/* magpie page */
+.magpiePageContainer {
+  width: 70%;
+  display: grid;
+  gap: 48px;
+
+  .content {
+    display: grid;
+    gap: 24px;
+  }
+
+  .background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1000;
+
+    height: 100vh;
+    width: 720px;
+
+    background: linear-gradient(to left, rgba(255,255,255,0) 10%, var(--color-lighter)), url('./photo_research_magpie.png') no-repeat;
+    background-size: cover;
+    background-position: 45%;
+  }
+}

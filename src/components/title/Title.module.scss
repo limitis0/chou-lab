@@ -1,0 +1,75 @@
+.general {
+  font-family: 'Black Han Sans', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+/* font size */
+.font10 {
+  font-size: 10px;
+}
+.font12 {
+  font-size: 12px;
+}
+.font24 {
+  font-size: 24px;
+}
+.font32 {
+  font-size: 32px;
+}
+.font36 {
+  font-size: 36px;
+}
+.font48 {
+  font-size: 48px;
+}
+.font64 {
+  font-size: 64px;
+}
+.font72 {
+  font-size: 72px;
+}
+
+/* color */
+.light {
+  color: var(--color-lighter);
+  border-color: var(--color-lighter);
+}
+.dark {
+  color: var(--color-dark);
+  border-color: var(--color-dark);
+}
+.yellow {
+  color: var(--color-yellow);
+  border-color: var(--color-yellow);
+}
+
+/* wide */
+.fit {
+  width: fit-content;
+}
+.expand {
+  width: 100%;
+}
+
+/* is underline */
+.underlineTrue {
+  border-bottom: 1px solid;
+}
+.underlineFalse {
+  border: none;
+}
+
+/* text align */
+.start {
+  text-align: start;
+  justify-content: start;
+}
+.center {
+  text-align: center;
+  justify-content: center;
+}
+.end {
+  text-align: end;
+  justify-content: end;
+}

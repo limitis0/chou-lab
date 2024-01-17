@@ -1,0 +1,37 @@
+.general {
+  font-family: 'Noto Sans', sans-serif;
+  color: var(--color-dark);
+}
+
+/* font size*/
+.l {
+  font-size: 24px;
+}
+.m {
+  font-size: 20px;
+}
+.s {
+  font-size: 14px;
+}
+.xs {
+  font-size: 12px;
+}
+
+/* font color */
+.dark {
+  color: var(--color-dark);
+}
+.lighter {
+  color: var(--color-lighter);
+}
+.yellow {
+  color: var(--color-yellow);
+}
+
+/* font weight */
+.bold {
+  font-weight: bold;
+}
+.regular {
+  font-weight: 400;
+}

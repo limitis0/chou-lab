@@ -1,0 +1,24 @@
+/* join us page */
+.pageContainer {
+  display: grid;
+  gap: 48px;
+
+  .contentBackground {
+    background-color: rgba(230,230,230,0.8);
+    box-shadow: 0 0 36px 36px rgba(230,230,230,0.8);
+  }
+
+  .background {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1000;
+
+    height: 520px;
+    width: 100vw;
+    
+    background: linear-gradient(to top, rgba(255,255,255,0) 10%, var(--color-lighter)), url('./photo_join_us.JPG') no-repeat;
+    background-size: 100%;
+    background-position: 50%;
+  }
+}

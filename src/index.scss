@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+:root {
+  --color-white : #FFF;
+  --color-black: #000;
+
+  --color-lighter: #e6e6e6;
+  --color-light: #D9D9D9;
+  --color-dark: #39393a;
+  --color-yellow: #e9d758;
+  --color-green: #297373;
+  --color-orange: #FF8552;
+}
+:root::-webkit-scrollbar {
+  display: none;
+}
+body {
+  margin: 0;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'Noto Sans', sans-serif;
+  background-color: var(--color-lighter);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

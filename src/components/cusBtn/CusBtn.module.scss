@@ -1,0 +1,60 @@
+.general {
+  text-align: center;
+}
+.general:hover {
+  cursor: pointer;
+}
+/* btn size */
+.big {
+  width: 120px;
+  height: 32px;
+  margin: 0 6px;
+  font-size: 20px;
+
+  line-height: 32px;
+}
+.small {
+  width: 90px;
+  height: 30px;
+  margin: 0 3px;
+  font-size: 18px;
+
+  line-height: 30px;
+}
+
+/* btn color */
+.trans {
+  background-color: transparent;
+  color: var(--color-lighter);
+  border-color: var(--color-green);
+}
+.trans:hover {
+  color: var(--color-yellow);
+  border-color: var(--color-yellow);
+}
+.light {
+  background-color: var(--color-lighter);
+  color: var(--color-dark);
+  border-color: var(--color-dark);
+}
+.light:hover {
+  background-color: var(--color-lighter); 
+  opacity: .3;
+ }
+.dark {
+  background-color: var(--color-dark);
+  color: var(--color-lighter);
+  border-color: var(--color-lighter);
+}
+.dark:hover {
+  background-color: var(--color-dark); 
+  opacity: .3;
+ }
+
+/* btn stroke */
+.underlineTrue {
+  border-bottom: 1px solid transparent;
+}
+.underlineFalse {
+  border: none;
+}
