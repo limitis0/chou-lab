@@ -24,10 +24,14 @@ function Footer() {
     // console.log(`useeffect rtData ->`, { rtContactData });
     const { address, phone, email } = rtContactData;
     setContactData({ address, phone, email });
+
+    sessionStorage.setItem('CONTACT', JSON.stringify({ address, phone, email }))
+
   }
 
   useEffect(() => {
-    contactData === undefined && getPageData();
+    const storageData = sessionStorage.getItem('CONTACT');
+    storageData === null ? getPageData() : setContactData(JSON.parse(storageData));
   }, []);
 
   return (

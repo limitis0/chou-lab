@@ -13,12 +13,12 @@ function Crab() {
     const rtResearchData = await getSingleDoc('RESEARCH', 'FIDDLER_CRABS');
     setResearchData(rtResearchData.researchText);
 
-    sessionStorage.setItem('FIDDLER_CRABS', rtResearchData.researchText)
+    sessionStorage.setItem('FIDDLER_CRABS', JSON.stringify(rtResearchData.researchText))
   }
 
   useEffect(() => {
-    const storageData = sessionStorage.getItem('FIDDLER_CRABS')
-    storageData === null ? getPageData() : setResearchData(storageData);
+    const storageData = sessionStorage.getItem('FIDDLER_CRABS');
+    storageData === null ? getPageData() : setResearchData(JSON.parse(storageData));
     setIsMobileSize(window.innerWidth < 900);
   }, [])
 
@@ -27,7 +27,9 @@ function Crab() {
       {!isMobileSize ? <Title textContent='Research' fontSize='64' color='dark' wide='expand' isUnderline textAlign='start' /> : <Title textContent='Research' fontSize='48' color='dark' wide='expand' isUnderline textAlign='center' />}
       <div className={classes.content}>
         {!isMobileSize ? <Title textContent='Fiddler Crab' fontSize='48' color='dark' wide='expand' textAlign='start' isUnderline={false} /> : <Title textContent='Fiddler Crab' fontSize='24' color='dark' wide='expand' textAlign='center' isUnderline={false} />}
-        <Content textContent={researchData} fontSize='l' color='dark' isBold={false} isCenter={isMobileSize} />
+        {researchData && researchData.map((data, index) => (
+          <Content textContent={data} fontSize='l' color='dark' isBold={false} isCenter={isMobileSize} key={index} />
+        ))}
       </div>
 
       <div className={classes.background}></div>

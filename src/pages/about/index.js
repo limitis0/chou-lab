@@ -20,12 +20,12 @@ function About() {
     const rtAboutData = await getSingleDoc('ABOUT', 'ABOUT_CONTENT');
     setAboutData(rtAboutData.aboutText);
 
-    sessionStorage.setItem('ABOUT', rtAboutData.aboutText)
+    sessionStorage.setItem('ABOUT', JSON.stringify(rtAboutData.aboutText))
   }
 
   useEffect(() => {
     const storageData = sessionStorage.getItem('ABOUT')
-    storageData === null ? getPageData() : setAboutData(storageData);
+    storageData === null ? getPageData() : setAboutData(JSON.parse(storageData));
 
     setIsMobileSize(window.innerWidth < 900);
   }, []);
@@ -41,7 +41,9 @@ function About() {
         </div>
       </div>
       {!isMobileSize ? <Title textContent="About" fontSize="64" color="dark" wide="expand" isUnderline textAlign="start" /> : <Title textContent="About" fontSize="48" color="dark" wide="expand" isUnderline textAlign="center" />}
-      {aboutData && (!isMobileSize ? <Content textContent={aboutData} fontSize='l' color='dark' /> : <Content textContent={aboutData} fontSize='m' color='dark' isCenter />)}
+      {aboutData && aboutData.map((data, index) => (
+        <Content textContent={data} fontSize='l' color='dark' isCenter={isMobileSize} key={index} />
+      ))}
 
       <div className={classes.background}></div>
     </div>

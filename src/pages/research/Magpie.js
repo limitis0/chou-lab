@@ -12,12 +12,12 @@ function Magpie() {
     const rtResearchData = await getSingleDoc('RESEARCH', 'TAIWAN_BLUE_MAGPIE');
     setResearchData(rtResearchData.researchText);
 
-    sessionStorage.setItem('TAIWAN_BLUE_MAGPIE', rtResearchData.researchText)
+    sessionStorage.setItem('TAIWAN_BLUE_MAGPIE', JSON.stringify(rtResearchData.researchText))
   }
 
   useEffect(() => {
     const storageData = sessionStorage.getItem('TAIWAN_BLUE_MAGPIE')
-    storageData === null ? getPageData() : setResearchData(storageData);
+    storageData === null ? getPageData() : setResearchData(JSON.parse(storageData));
     setIsMobileSize(window.innerWidth < 900);
   }, [])
 
@@ -26,7 +26,9 @@ function Magpie() {
       {!isMobileSize ? <Title textContent='Research' fontSize='64' color='dark' wide='expand' textAlign='start' isUnderline /> : <Title textContent='Research' fontSize='48' color='dark' wide='expand' isUnderline textAlign='center' />}
       <div className={classes.content}>
         {!isMobileSize ? <Title textContent='Taiwan Blue Magpie' fontSize='48' color='dark' wide='expand' textAlign='start' isUnderline={false} /> : <Title textContent='Taiwan Blue Magpie' fontSize='24' color='dark' wide='expand' textAlign='center' isUnderline={false} />}
-        <Content textContent={researchData} fontSize='l' color='dark' isBold={false} isCenter={isMobileSize} />
+        {researchData && researchData.map((data, index) => (
+          <Content textContent={data} fontSize='l' color='dark' isBold={false} isCenter={isMobileSize} key={index} />
+        ))}
       </div>
 
       <div className={classes.background}></div>

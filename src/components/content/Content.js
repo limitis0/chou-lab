@@ -15,7 +15,7 @@ import classes from './Content.module.scss';
 function Content(props) {
   const { fontSize, color, isBold, textContent, isCenter } = props;
   return (
-    <div className={`general ${classes[fontSize]} ${classes[color]} ${classes[isBold ? 'bold' : 'regular']} ${isCenter && classes.center}`}>
+    <div className={`general ${classes[fontSize]} ${classes[color]} ${classes[isBold ? 'bold' : 'regular']} ${isCenter ? classes.center : classes.start}`}>
       {textContent}
     </div>
   );

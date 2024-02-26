@@ -28,6 +28,7 @@ export default function People() {
       {peopleData && <div className={classes.contentContainer}>
         {peopleData.map((data, index) => <PeopleCard memberId={`MEMBER_0${index}`} memberInfo={{ info: data }} isMobileSize={isMobileSize} key={index} />)}
       </div>}
+      <div className={classes.background}></div>
     </div>
   );
 }
