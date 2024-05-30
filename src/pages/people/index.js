@@ -27,6 +27,7 @@ export default function People() {
       {!isMobileSize ? <Title textContent='People' fontSize='64' color='dark' wide='expand' textAlign='start' isUnderline /> : <Title textContent='People' fontSize='48' color='dark' wide='expand' textAlign='center' isUnderline />}
       {peopleData && <div className={classes.contentContainer}>
         {peopleData.map((data, index) => <PeopleCard memberId={`MEMBER_0${index}`} memberInfo={{ info: data }} isMobileSize={isMobileSize} key={index} />)}
+        {/* change member id logic if member >= 10 */}
       </div>}
       <div className={classes.background}></div>
     </div>
