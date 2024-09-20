@@ -18,6 +18,8 @@ function About() {
 
   const getPageData = async () => {
     const rtAboutData = await getSingleDoc('ABOUT', 'ABOUT_CONTENT');
+    console.log(`useeffect rtData -> `, { rtAboutData });
+
     setAboutData(rtAboutData.aboutText);
 
     sessionStorage.setItem('ABOUT', JSON.stringify(rtAboutData.aboutText))
@@ -42,7 +44,7 @@ function About() {
       </div>
       {!isMobileSize ? <Title textContent="About" fontSize="64" color="dark" wide="expand" isUnderline textAlign="start" /> : <Title textContent="About" fontSize="48" color="dark" wide="expand" isUnderline textAlign="center" />}
       {aboutData && aboutData.map((data, index) => (
-        <Content textContent={data} fontSize='l' color='dark' isCenter={isMobileSize} key={index} />
+        <Content contentType='string' textContent={data} fontSize='l' color='dark' isCenter={isMobileSize} key={index} />
       ))}
 
       <div className={classes.background}></div>

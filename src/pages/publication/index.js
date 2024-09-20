@@ -11,6 +11,8 @@ export default function Publications() {
 
   const getPageData = async () => {
     const rtPublicationData = await getSingleDoc('PUBLICATIONS', 'PUBLICATIONS');
+    console.log(`useeffect rtData -> `, { rtPublicationData });
+
 
     setPublicationData(rtPublicationData.publicationDetail) // type: array
 

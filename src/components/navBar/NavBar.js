@@ -47,7 +47,7 @@ function NavBar(props) {
   const getPageData = async () => {
     const rtContactData = await getSingleDoc('CONTACT', 'CONTACT');
 
-    // console.log(`useeffect rtData ->`, { rtContactData });
+    console.log(`useeffect rtData ->`, { rtContactData });
     const { address, phone, email } = rtContactData;
     setContactData({ address, phone, email });
   }
@@ -101,15 +101,15 @@ function NavBar(props) {
             <>
               <div className={classes.singleInfo}>
                 {phoneSVG()}
-                <Content textContent={contactData.phone} color='lighter' fontSize='s' isBold={false} />
+              <Content contentType='string' textContent={contactData.phone} color='lighter' fontSize='s' isBold={false} />
               </div>
               <div className={classes.singleInfo}>
                 {emailSVG()}
-                <Content textContent={contactData.email} color='lighter' fontSize='s' isBold={false} />
+              <Content contentType='string' textContent={contactData.email} color='lighter' fontSize='s' isBold={false} />
               </div>
               <div className={classes.singleInfo}>
                 {addressSVG()}
-                <Content textContent={contactData.address} color='lighter' fontSize='s' isBold={false} />
+              <Content contentType='string' textContent={contactData.address} color='lighter' fontSize='s' isBold={false} />
               </div>
             </>}
         </div>

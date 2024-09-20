@@ -15,7 +15,7 @@ function PublicationCard(props) {
   return (
     <div className={classes.cardContainer}>
       <div className={classes.circle}>{circleSVG()}</div>
-      <Content textContent={contentText} fontSize='m' color='dark' />
+      <Content contentType='string' textContent={contentText} fontSize='m' color='dark' />
     </div>
   );
 }

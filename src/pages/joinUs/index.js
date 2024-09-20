@@ -13,6 +13,7 @@ export default function JoinUs() {
 
   const getPageData = async () => {
     const rtJoinUsData = await getSingleDoc('CONTACT', 'JOIN_US');
+    console.log(`useeffect rtData ->`, { rtJoinUsData });
 
 
     setJoinUsData(rtJoinUsData.content);
@@ -38,7 +39,7 @@ export default function JoinUs() {
     <div className={classes.pageContainer}>
       <div className={classes.contentBackground}>
         {!isMobileSize ? <Title textContent='Join Us' fontSize='64' color='dark' wide='expand' isUnderline textAlign='start' /> : <Title textContent='Join Us' fontSize='48' color='dark' wide='expand' isUnderline textAlign='center' />}
-        {joinUsData && contactData && (!isMobileSize ? <><Content textContent={joinUsData} fontSize='l' color='dark' /><Content textContent={contactData.email} fontSize='l' color='dark' isBold /></> : <><Content textContent={joinUsData} fontSize='m' color='dark' isCenter /><Content textContent={contactData.email} fontSize='m' color='dark' isBold isCenter /></>)}
+        {joinUsData && contactData && (!isMobileSize ? <><Content contentType='string' textContent={joinUsData} fontSize='l' color='dark' /><Content contentType='string' textContent={contactData.email} fontSize='l' color='dark' isBold /></> : <><Content contentType='string' textContent={joinUsData} fontSize='m' color='dark' isCenter /><Content contentType='string' textContent={contactData.email} fontSize='m' color='dark' isBold isCenter /></>)}
       </div>
 
       <div className={classes.background}>

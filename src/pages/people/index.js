@@ -10,6 +10,8 @@ export default function People() {
 
   const getPageData = async () => {
     const rtPeopleData = await getAllDocs('PEOPLE');
+    console.log(`useeffect rtData -> `, { rtPeopleData });
+
 
     setPeopleData(rtPeopleData);
 

@@ -10,6 +10,8 @@ function Magpie() {
 
   const getPageData = async () => {
     const rtResearchData = await getSingleDoc('RESEARCH', 'TAIWAN_BLUE_MAGPIE');
+    console.log(`useeffect rtData -> `, { rtResearchData });
+
     setResearchData(rtResearchData.researchText);
 
     sessionStorage.setItem('TAIWAN_BLUE_MAGPIE', JSON.stringify(rtResearchData.researchText))
@@ -27,7 +29,7 @@ function Magpie() {
       <div className={classes.content}>
         {!isMobileSize ? <Title textContent='Taiwan Blue Magpie' fontSize='48' color='dark' wide='expand' textAlign='start' isUnderline={false} /> : <Title textContent='Taiwan Blue Magpie' fontSize='24' color='dark' wide='expand' textAlign='center' isUnderline={false} />}
         {researchData && researchData.map((data, index) => (
-          <Content textContent={data} fontSize='l' color='dark' isBold={false} isCenter={isMobileSize} key={index} />
+          <Content contentType={data.contentType} textContent={data.textContent} imgUrl={data.imgUrl} imgInfoText={data.imgInfoText} fontSize='l' color='dark' isBold={false} isCenter={isMobileSize} key={index} />
         ))}
       </div>
 

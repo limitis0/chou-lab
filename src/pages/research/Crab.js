@@ -11,6 +11,8 @@ function Crab() {
 
   const getPageData = async () => {
     const rtResearchData = await getSingleDoc('RESEARCH', 'FIDDLER_CRABS');
+    console.log(`useeffect rtData -> `, { rtResearchData });
+
     setResearchData(rtResearchData.researchText);
 
     sessionStorage.setItem('FIDDLER_CRABS', JSON.stringify(rtResearchData.researchText))
@@ -28,7 +30,7 @@ function Crab() {
       <div className={classes.content}>
         {!isMobileSize ? <Title textContent='Fiddler Crab' fontSize='48' color='dark' wide='expand' textAlign='start' isUnderline={false} /> : <Title textContent='Fiddler Crab' fontSize='24' color='dark' wide='expand' textAlign='center' isUnderline={false} />}
         {researchData && researchData.map((data, index) => (
-          <Content textContent={data} fontSize='l' color='dark' isBold={false} isCenter={isMobileSize} key={index} />
+          <Content contentType={data.contentType} textContent={data.textContent} imgUrl={data.imgUrl} imgInfoText={data.imgInfoText} fontSize='l' color='dark' isBold={false} isCenter={isMobileSize} key={index} />
         ))}
       </div>
 
