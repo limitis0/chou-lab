@@ -4,6 +4,7 @@ import Content from '../../components/content/Content';
 import { getSingleDoc } from '../../utilities/api';
 
 import classes from './index.module.scss';
+import { scientificNameFormat } from '../../utilities/textAdjustment';
 
 function Crab() {
   const [researchData, setResearchData] = useState();
@@ -30,7 +31,7 @@ function Crab() {
       <div className={classes.content}>
         {!isMobileSize ? <Title textContent='Fiddler Crab' fontSize='48' color='dark' wide='expand' textAlign='start' isUnderline={false} /> : <Title textContent='Fiddler Crab' fontSize='24' color='dark' wide='expand' textAlign='center' isUnderline={false} />}
         {researchData && researchData.map((data, index) => (
-          <Content contentType={data.contentType} textContent={data.textContent} imgUrl={data.imgUrl} imgInfoText={data.imgInfoText} fontSize='l' color='dark' isBold={false} isCenter={isMobileSize} key={index} />
+          <Content contentType={data.contentType} textContent={scientificNameFormat(data.textContent)} imgUrl={data.imgUrl} imgInfoText={data.imgInfoText} fontSize='l' color='dark' isBold={false} isCenter={isMobileSize} key={index} />
         ))}
       </div>
 

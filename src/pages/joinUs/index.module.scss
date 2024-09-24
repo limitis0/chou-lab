@@ -21,6 +21,15 @@
     background-size: 100%;
     background-position: 50%;
   }
+
+  .hyperLink {
+    text-decoration: none;
+  }
+  .hyperLink:hover {
+    cursor: pointer;
+    color: var(--color-green);
+    text-decoration: underline;
+  }
 }
 
 @media screen and (max-width: 900px) {

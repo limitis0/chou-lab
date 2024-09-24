@@ -6,7 +6,7 @@ import classes from './Content.module.scss';
  * @param {{
  * contentType: 'string' | 'img'
  * fontSize: 'l' | 'm' | 's' | 'xs'
- * color: 'dark' | 'lighter' | 'yellow'
+ * color: 'dark' | 'lighter' | 'yellow' | 'green'
  * isBold: boolean
  * isCenter: boolean
  * textContent: string
