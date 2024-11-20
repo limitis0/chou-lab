@@ -59,14 +59,14 @@ function NavBar(props) {
     <div className={classes.container}>
       <div className={classes.logo} onClick={() => handleOnClick('/')}>
         <div className={classes.icon}>
-          <img width={24} src='/crab_image.png' alt='logo'></img>
+          <img width={24} src='https://firebasestorage.googleapis.com/v0/b/choulab-e11d9.appspot.com/o/crab%20image.png?alt=media&token=c90f93c5-434c-41df-8156-ef1adbcc3ea8' alt='logo'></img>
         </div>
         <div className={classes.title}>Chou Lab</div>
         <div className={classes.subtitle}>Behavioral ecology and Evolution of Animal Communication</div>
       </div>
 
       <div className={classes.btns}>
-        <CusBtn btnText='About' btnSize='big' btnColor='trans' isUnderline onClick={() => handleOnClick('/')} />
+        <CusBtn btnText='About' btnSize='big' btnColor='trans' isUnderline onClick={() => handleOnClick('/about')} />
         <CusBtn btnText='People' btnSize='big' btnColor='trans' isUnderline onClick={() => handleOnClick('/people')} />
         <CusBtn btnText='Research' btnSize='big' btnColor='trans' isUnderline onClick={() => handleOnClick('/research')} />
         <CusBtn btnText='Publications' btnSize='big' btnColor='trans' isUnderline onClick={() => handleOnClick('/publications')} />

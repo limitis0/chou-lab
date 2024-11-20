@@ -6,12 +6,19 @@ import Publication from "../pages/publication";
 import JoinUs from "../pages/joinUs";
 import Crab from "../pages/research/Crab";
 import Magpie from "../pages/research/Magpie";
+import Enter from "../pages/enter";
 
 const routes = [
   {
+    name: 'enter',
+    displayName: 'Welcome to Chou\'s lab',
+    path: '/',
+    component: <Enter />
+  },
+  {
     name: 'about',
     displayName: 'About',
-    path: '/',
+    path: '/about',
     component: <About />
   },
   {

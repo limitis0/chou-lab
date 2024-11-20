@@ -1,0 +1,49 @@
+/* About page */
+.pageContainer {
+  width: 70%;
+  margin-left: auto;
+
+  display: grid;
+  gap: 48px;
+
+
+  .enterScreenContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-green);
+    display: grid;
+    align-content: center;
+    justify-items: center;
+
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 78%, var(--color-lighter)),url('https://firebasestorage.googleapis.com/v0/b/choulab-e11d9.appspot.com/o/photo_enter_1.jpg?alt=media&token=58138496-e96e-4d13-bd5c-91a8023c8f0a') left top no-repeat, url('https://firebasestorage.googleapis.com/v0/b/choulab-e11d9.appspot.com/o/photo_enter_2.jpg?alt=media&token=08bbba7f-3b42-4ec5-8c72-daccecdc0dfc') right top no-repeat;
+    background-size: 50vw 100vh;
+
+    transition: transform 1s ease-in-out;
+
+    .arrowDown {
+      position: absolute;
+      bottom: 56px;
+    }
+  }
+  .enterScreenContainer:hover {
+    cursor: pointer;
+  }
+  .hide {
+    transform: translate(0, -200%);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .pageContainer {
+    width: 100%;
+    margin: 0;
+    .enterScreenContainer {
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 84%, var(--color-lighter)),url('https://firebasestorage.googleapis.com/v0/b/choulab-e11d9.appspot.com/o/photo_enter_1.jpg?alt=media&token=58138496-e96e-4d13-bd5c-91a8023c8f0a') top no-repeat;
+      background-size: cover;
+    }
+  }
+}

@@ -10,6 +10,7 @@ import NavBar from './components/navBar/NavBar';
 import Footer from './components/footer/Footer';
 import Crab from './pages/research/Crab';
 import Magpie from './pages/research/Magpie';
+import Enter from './pages/enter';
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
       <NavBar selected={`${selected}`} />
       <div className={classes.contentContainer} >
         <Routes>
-          <Route path='/' element={<About />} />
+          <Route path='/' element={<Enter />} />
+          <Route path='/about' element={<About />} />
           <Route path='/people' element={<People />} />
           <Route path='/research' element={<Research />} />
           <Route path='/research/crab' element={<Crab />} />

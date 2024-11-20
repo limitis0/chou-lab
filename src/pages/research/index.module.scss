@@ -75,7 +75,7 @@
 
 /* crab page */
 .crabPageContainer {
-  width: 70%;
+  width: 60%;
   display: grid;
   gap: 48px;
 
@@ -91,16 +91,16 @@
     z-index: -1000;
 
     height: 100vh;
-    width: 720px;
+    width: 40%;
 
-    background: linear-gradient(to left, rgba(255,255,255,0) 10%, var(--color-lighter)), url('./photo_research_crab.jpg') no-repeat;
+    background: linear-gradient(to left, rgba(255,255,255,0) 50%, var(--color-lighter)), url('./photo_research_crab.jpg') no-repeat;
     background-size: cover;
   }
 }
 
 /* magpie page */
 .magpiePageContainer {
-  width: 70%;
+  width: 60%;
   display: grid;
   gap: 48px;
 
@@ -116,9 +116,9 @@
     z-index: -1000;
 
     height: 100vh;
-    width: 720px;
+    width: 40%;
 
-    background: linear-gradient(to left, rgba(255,255,255,0) 10%, var(--color-lighter)), url('./photo_research_magpie.png') no-repeat;
+    background: linear-gradient(to left, rgba(255,255,255,0) 50%, var(--color-lighter)), url('./photo_research_magpie.png') no-repeat;
     background-size: cover;
     background-position: 45%;
   }
