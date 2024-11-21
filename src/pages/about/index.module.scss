@@ -14,9 +14,6 @@
 
     height: 100vh;
     width: 40%;
-
-    background: linear-gradient(to right, rgba(255,255,255,0) 50%, var(--color-lighter)), url('https://firebasestorage.googleapis.com/v0/b/choulab-e11d9.appspot.com/o/photo_about.jpg?alt=media&token=53c8677d-b958-4bfd-97ea-ee7ecfc7b1d1') no-repeat;
-    background-size: cover;
   }
 }
 
@@ -26,10 +23,10 @@
     margin: 0;
 
     .background {
-      height: 240px;
+      height: 25%;
       width: 100vw;
   
-      background: linear-gradient(to bottom, rgba(255,255,255,0) 10%, var(--color-lighter)), url('https://firebasestorage.googleapis.com/v0/b/choulab-e11d9.appspot.com/o/photo_about.jpg?alt=media&token=53c8677d-b958-4bfd-97ea-ee7ecfc7b1d1') no-repeat;
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 10%, var(--color-lighter)) no-repeat;
       background-size: cover;
     }
   }
